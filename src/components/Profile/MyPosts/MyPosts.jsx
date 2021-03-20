@@ -3,6 +3,18 @@ import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+
+  let postsData = [
+    {message: "Поздравляю, ТЫ ТОЛЬКО ЧТО ГРАНАТУ.", likesCount:"10"},
+    {message: "Только что что?", likecounts:"15"},
+    {message: "Гранату, ясное дело."},
+    {message: "Что гранату?"},
+    {message: "Только что."},
+    {message: "Что только что?"},
+    {message: "Гранату."},
+    {message: "Что гранату?"},
+    {message: "Только что."},
+  ]
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
@@ -14,15 +26,15 @@ const MyPosts = (props) => {
       </div>
       <button>Remove</button>
       <div className={s.posts}>
-        <Post message="Поздравляю, ТЫ ТОЛЬКО ЧТО ГРАНАТУ." likecounts="10" />
-        <Post message="Только что что?" likecounts="15" />
-        <Post message="Гранату, ясное дело." />
-        <Post message="Что гранату?" />
-        <Post message="Только что." />
-        <Post message="Что только что?" />
-        <Post message="Гранату." />
-        <Post message="Что гранату?" />
-        <Post message="Только что." />
+        <Post message={postsData[0].message} likesCount={postsData[0].likecounts}/>
+        <Post message={postsData[1].message} likesCount={postsData[1].likecounts}/>
+        <Post message={postsData[2].message} likesCount={postsData[2].likecounts}/>
+        <Post message={postsData[3].message} likesCount={postsData[3].likecounts}/>
+        <Post message={postsData[4].message} likesCount={postsData[4].likecounts}/>
+        <Post message={postsData[5].message} likesCount={postsData[5].likecounts}/>
+        <Post message={postsData[6].message} likesCount={postsData[6].likecounts}/>
+        <Post message={postsData[7].message} likesCount={postsData[7].likecounts}/>
+        <Post message={postsData[8].message} likesCount={postsData[8].likecounts}/>
       </div>
     </div>
   );

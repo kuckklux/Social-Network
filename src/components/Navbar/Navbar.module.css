@@ -7,6 +7,7 @@
 .item a {
   
   text-decoration: none;
+  color: #9a9dc6;
 }
 
 .item a.activeLink {
