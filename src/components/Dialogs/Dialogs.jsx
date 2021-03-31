@@ -4,29 +4,15 @@ import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 
 const Dialogs = (props) => {
-  let dialogs = [
-    { id: 1, name: "cth" },
-    { id: 2, name: "shbmnk" },
-    { id: 3, name: "fv" },
-    { id: 4, name: "Дмитрий Юшин" },
-    { id: 5, name: "Аркадий Давидович" },
-    { id: 6, name: "Jonyol47" },
-  ];
-
-  let messages = [
-    { message: "Братишка" },
-    { message: "Я тебе покушать принес" },
-    { message: "Угощайся" },
-  ];
 
   /*стрелочная функция вызовется столько раз, сколько элементов в массиве
   let dialogsElements = dialogsData.map( (dialog) => {})[ — когда параметр 1, скобки можно убрать*/
 
-  let dialogsElements = dialogs.map((d) => (
+  let dialogsElements = props.dialogs.map((d) => (
     <DialogItem name={d.name} id={d.id} />
   ));
 
-  let messagesElements = messages.map((m) => <Message message={m.message} />);
+  let messagesElements = props.messages.map((m) => <Message message={m.message} />);
 
   return (
     <div className={s.dialogs}>
