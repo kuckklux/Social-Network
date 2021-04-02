@@ -5,9 +5,6 @@ import DialogItem from "./DialogItem/DialogItem";
 
 const Dialogs = (props) => {
 
-  /*стрелочная функция вызовется столько раз, сколько элементов в массиве
-  let dialogsElements = dialogsData.map( (dialog) => {})[ — когда параметр 1, скобки можно убрать*/
-
   let dialogsElements = props.dialogs.map((d) => (
     <DialogItem name={d.name} id={d.id} />
   ));
