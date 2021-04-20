@@ -4,5 +4,14 @@
 }
 
 .posts {
-   margin-top:10px;
+   margin-top:50px;
+}
+
+.postsBlock h3{
+   margin-top: 0px;
+   font-family: Comic Sans MS,Comic Sans;
+}
+
+#add{
+   background: white;
 }
