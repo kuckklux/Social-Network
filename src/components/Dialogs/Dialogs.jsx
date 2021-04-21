@@ -9,24 +9,19 @@ const Dialogs = (props) => {
   ));
 
   let messagesElements = props.messages.map((m) => (
-    <Message
-      message={m.message}
-      newMessageText={props.dialogsPage.newMessageText}
-      updateNewMessageText={props.updateNewMessageText}
-      addMessage={props.addMessage}
-    />
+    <Message message={m.message} />
   ));
 
   let newMessageElement = React.createRef();
 
-  let addMessage = () =>{
+  let addMessage = () => {
     let text = newMessageElement.current.value;
     props.addMessage(text);
   };
 
   let onMessageChange = () => {
     let text = newMessageElement.current.value;
-    props.updateNewMessageText(text)
+    props.updateNewMessageText(text);
   };
 
   return (
@@ -39,7 +34,7 @@ const Dialogs = (props) => {
         <textarea
           onChange={onMessageChange}
           ref={newMessageElement}
-          value={props.newMessageText}  
+          value={props.newMessageText}
           cols="13"
           rows="1"
         ></textarea>
