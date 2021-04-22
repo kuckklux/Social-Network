@@ -7,9 +7,9 @@
 .item a {
   
   text-decoration: none;
-  color: #9a9dc6;
+  color: #afa65a;
 }
 
 .item a.activeLink {
-  color: gold;
+  color:#202020;
 }
