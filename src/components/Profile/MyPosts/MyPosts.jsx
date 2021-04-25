@@ -27,8 +27,6 @@ const MyPosts = (props) => {
           onChange={onPostChange}
           ref={newPostElement}
           value={props.newPostText}
-          cols="30"
-          rows="1"
         ></textarea>
       </div>
       <div>
